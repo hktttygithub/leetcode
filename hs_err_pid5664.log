@@ -1,0 +1,77 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_STACK_OVERFLOW (0xc00000fd) at pc=0x0000000003299d11, pid=5664, tid=0x000000000000386c
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_144-b01) (build 1.8.0_144-b01)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.144-b01 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# j  hkttty.niuke.VerifySquenceOfBST_Re.helper([III)Z+0
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000003183000):  JavaThread "main" [_thread_in_Java, id=14444, stack(0x0000000002ed0000,0x0000000002fd0000)]
+
+siginfo: ExceptionCode=0xc00000fd, ExceptionInformation=0x0000000000000001 0x0000000002ed0ff0 
+
+Registers:
+RAX=0x0000000038ac7738, RBX=0x0000000038a69f48, RCX=0x0000000000000100, RDX=0x0000000038a6d458
+RSP=0x0000000002ed6ff0, RBP=0x0000000002ed7030, RSI=0x0000000003183000, RDI=0x00000000ffffffff
+R8 =0x0000000000000009, R9 =0x0000000002ec7750, R10=0x0000000055e3f240, R11=0x0000000002fca3f0
+R12=0x0000000000000000, R13=0x0000000038a69e40, R14=0x0000000002ed7080, R15=0x0000000003183000
+RIP=0x0000000003299d11, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x0000000002ed6ff0)
+0x0000000002ed6ff0:   0000000002ed6ff0 0000000038a69e40
+0x0000000002ed7000:   0000000002ed7080 0000000038a6d458
+0x0000000002ed7010:   0000000038ac7838 0000000038a69f48
+0x0000000002ed7020:   0000000000000000 0000000002ed7068
+0x0000000002ed7030:   0000000002ed70c8 0000000003287bd0
+0x0000000002ed7040:   0000000000000000 0000000000000000
+0x0000000002ed7050:   0000000000000000 0000000000000000
+0x0000000002ed7060:   0000000000000000 0000000000000001
+0x0000000002ed7070:   0000000000000000 000000066c1f95f0
+0x0000000002ed7080:   000000066c1ea8e8 0000000002ed7088
+0x0000000002ed7090:   0000000038a69e94 0000000002ed7118
+0x0000000002ed70a0:   0000000038a6d458 0000000038ac7950
+0x0000000002ed70b0:   0000000038a69f48 0000000002ed7068
+0x0000000002ed70c0:   0000000002ed7100 0000000002ed7160
+0x0000000002ed70d0:   0000000003287bd0 0000000000000000
+0x0000000002ed70e0:   0000000000000000 0000000000000002 
+
+Instructions: (pc=0x0000000003299d11)
+0x0000000003299cf1:   00 f0 ff ff 89 84 24 00 e0 ff ff 89 84 24 00 d0
+0x0000000003299d01:   ff ff 89 84 24 00 c0 ff ff 89 84 24 00 b0 ff ff
+0x0000000003299d11:   89 84 24 00 a0 ff ff 41 c6 87 95 02 00 00 00 41
+0x0000000003299d21:   8b 97 98 03 00 00 85 d2 0f 84 2c 01 00 00 e8 05 
+
+
+Register to memory mapping:
+
+RAX=0x0000000038ac7738 is pointing into metadata
+RBX={method} {0x0000000038a69f50} 'helper' '([III)Z' in 'hkttty/niuke/VerifySquenceOfBST_Re'
+RCX=0x0000000000000100 is an unknown value
+RDX=0x0000000038a6d458 is pointing into metadata
+RSP=0x0000000002ed6ff0 is pointing into the stack for thread: 0x0000000003183000
+RBP=0x0000000002ed7030 is pointing into the stack for thread: 0x0000000003183000
+RSI=0x0000000003183000 is a thread
+RDI=0x00000000ffffffff is an unknown value
+R8 =0x0000000000000009 is an unknown value
+R9 =0x0000000002ec7750 is an unknown value
+R10=0x0000000055e3f240 is an unknown value
+R11=0x0000000002fca3f0 is pointing into the stack for thread: 0x0000000003183000
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000038a69e40 is pointing into metadata
+R14=0x0000000002ed7080 is pointing into the stack for thread: 0x0000000003183000
+R15=0x0000000003183000 is a thread
+
+
+Stack: [0x0000000002ed0000,0x0000000002fd0000],  sp=0x0000000002ed6ff0,  free space=27k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x0000000003299d11
